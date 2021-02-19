@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+          url("./fonts/OpenSans-Regular.woff2") format("woff2"),
+          url("./fonts/OpenSans-Regular.woff") format("woff"),
+          url("./fonts/OpenSans-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src:
+          url("./fonts/OpenSans-SemiBold.woff2") format("woff2"),
+          url("./fonts/OpenSans-SemiBold.woff") format("woff"),
+          url("./fonts/OpenSans-SemiBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+          url("./fonts/OpenSans-Bold.woff2") format("woff2"),
+          url("./fonts/OpenSans-Bold.woff") format("woff"),
+          url("./fonts/OpenSans-Bold.ttf") format("ttf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: "OpenSans", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #48494D;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
