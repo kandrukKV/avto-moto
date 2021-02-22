@@ -1,3 +1,5 @@
+@import "design-tokens/variables";
+
 @font-face {
   font-family: "OpenSans";
   font-weight: 400;
@@ -49,7 +51,7 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 16px;
-  color: #48494D;
+  color: $default-text-color;
 }
 
 .visually-hidden {
@@ -63,10 +65,4 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.container {
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
 }

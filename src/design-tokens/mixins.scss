@@ -1,0 +1,7 @@
+@import "variables";
+
+@mixin container() {
+  width: 100%;
+  max-width: $desktop-width;
+  margin: 0 auto;
+}

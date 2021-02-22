@@ -1,0 +1,30 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal--active {
+  display: flex;
+}
+.modal__content {
+  position: relative;
+  padding: 30px 35px 35px 35px;
+  background-color: #F5F5F9;
+}
+
+.modal__close {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}

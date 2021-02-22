@@ -1,0 +1,28 @@
+@import "../../design-tokens/variables";
+
+.rating-form {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.rating-form__label {
+  display: block;
+  width: 37px;
+  height: 33px;
+  cursor: pointer;
+}
+
+.rating-form__label:hover .rating-form__star,
+.rating-form__label:hover ~ .rating-form__label .rating-form__star,
+.rating-form__input:focus ~ .rating-form__label .rating-form__star,
+.rating-form__input:checked ~ .rating-form__label .rating-form__star {
+  fill: $burgundy;
+}
+
+.rating-form__star {
+  fill: rgba(189, 190, 194, 0.7);
+  transition: fill 0.3s;
+  margin-left: 8px;
+}

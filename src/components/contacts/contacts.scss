@@ -1,0 +1,42 @@
+.contacts {
+  padding-top: 30px;
+  display: flex;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0 75px 0 0;
+  list-style: none;
+}
+
+.contacts__item {
+  margin-bottom: 35px;
+}
+
+.contacts__name {
+  margin: 0 0 18px 0;
+  font-weight: 700;
+}
+
+.contacts__value {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: pre-line;
+}
+
+.contacts__wrap {
+  position: relative;
+}
+
+.contacts__map {
+  position: relative;
+  z-index: 1;
+}
+
+.contacts__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+}

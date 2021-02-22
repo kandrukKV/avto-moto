@@ -1,0 +1,13 @@
+@import "../../design-tokens/mixins";
+
+.header {
+  padding: 15px 0;
+  background-color: $bg_color;
+}
+
+.header__wrapper {
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

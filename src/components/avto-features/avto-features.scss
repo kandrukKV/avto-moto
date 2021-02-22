@@ -1,0 +1,15 @@
+.avto-features {
+  margin: 0;
+  padding: 30px 0 0 0;
+  list-style: none;
+}
+
+.avto-features__item {
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 565px;
+  border-bottom: 1px solid #D7D9DF;
+}

@@ -1,0 +1,64 @@
+@import "../../design-tokens/variables";
+
+.slider {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 90px;
+}
+
+.slider img {
+  display: block;
+}
+
+.slider__top {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.slider__top::before {
+  content: "NEW MODEL";
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  color: #FFFFFF;
+  width: 122px;
+  height: 30px;
+  background-color: $burgundy;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.slider__bottom {
+  cursor: pointer;
+}
+
+.slider__arrow {
+  stroke: #48494D;
+}
+
+.slider__arrow--disable {
+  stroke: #D7D9DF;
+}
+
+.slider__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.slider__list :not(:last-child) {
+  margin-right: 25px;
+}

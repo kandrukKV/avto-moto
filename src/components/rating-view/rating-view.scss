@@ -1,0 +1,33 @@
+@import "../../design-tokens/variables";
+
+.rating {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.rating__stars {
+  width: 110px;
+}
+
+.rating__star {
+  font-size: 0;
+  display: inline-block;
+  margin-right: 5px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../../img/star.svg");
+  background-repeat: no-repeat;
+}
+
+.rating__star--active {
+  background-image: url("../../img/star-active.svg");
+}
+
+.rating__result {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 15px;
+  line-height: 20px;
+  color: $burgundy;
+}

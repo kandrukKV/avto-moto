@@ -1,0 +1,117 @@
+@import "../../design-tokens/variables";
+
+.review-form {
+  width: 630px;
+}
+
+.review-form__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 47px;
+}
+
+.review-form__wrap {
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.review-form__field {
+  position: relative;
+}
+
+.review-form__field__required::before{
+  z-index: 5;
+  content: "*";
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
+.review-form__field__required--error::before {
+  color: #FF0000;
+}
+
+.review-form__field__required--error::after {
+  z-index: 5;
+  content: "Пожалуйста, заполните поле";
+  font-size: 14px;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: #FF0000;
+}
+
+.review-form__field__required--error input,
+.review-form__field__required--error textarea {
+  border: 1px solid #FF0000;
+}
+
+
+.review-form__field:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.review-form__input {
+  position: relative;
+  width: 300px;
+  padding: 15px 25px;
+  border: 1px solid rgba(72, 73, 77, 0.2);
+}
+
+.review-form__input::placeholder {
+  font-family: "OpenSans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #48494D;
+}
+
+.review-form__rating {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-form__label {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.review-form__comments {
+  display: block;
+  width: 300px;
+  padding: 15px 25px;
+  height: 118px;
+  resize: none;
+}
+
+.review-form__comments::placeholder {
+  font-family: "OpenSans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #48494D;
+}
+
+.review-form__bottom {
+  text-align: center;
+}
+
+.review-form__btn {
+  padding: 16px 20px;
+  background-color: $burgundy;
+  border: 1px solid $burgundy;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.review-form__btn:hover {
+  background-color: #BD0C21;
+  border: 1px solid #BD0C21;
+  color: #FFFFFF;
+}

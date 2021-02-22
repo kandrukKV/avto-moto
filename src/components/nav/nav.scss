@@ -1,0 +1,13 @@
+.nav__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__item {
+  margin-left: 68px;
+  font-weight: 600;
+}

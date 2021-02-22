@@ -1,0 +1,19 @@
+@import "../../design-tokens/mixins";
+
+.footer {
+  padding: 30px 0;
+  background-color: $bg_color;
+}
+
+.footer__nav-list {
+  @include container();
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__nav-item {
+  font-weight: 600;
+}

@@ -1,0 +1,24 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__img {
+  margin-right: 20px;
+}
+
+.logo__text p {
+  margin: 0;
+}
+
+.logo__name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.logo__subname {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+}

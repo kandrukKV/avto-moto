@@ -1,0 +1,29 @@
+@import "../../design-tokens/variables";
+
+.tab-bar-nav {
+  border: 1px solid #D7D9DF;
+  background-color: #FFFFFF;
+  color: #48494D;
+  font-size: 20px;
+  width: 195px;
+  padding: 10px 14px 14px 14px;
+  cursor: pointer;
+}
+
+.tab-bar-nav:hover {
+  background-color: #BD0C21;
+  border: 1px solid #BD0C21;
+  color: #FFFFFF;
+}
+
+.tab-bar-nav--active {
+  border: 1px solid $burgundy;
+  background-color: $burgundy;
+  color: #FFFFFF;
+}
+
+.tab-bar-nav--active:hover {
+  border: 1px solid $burgundy;
+  background-color: $burgundy;
+  color: #FFFFFF;
+}
