@@ -1,5 +1,6 @@
-import "./review-form.scss";
+import React from "react";
 import RatingForm from "../rating-form/rating-form";
+import "./review-form.scss";
 
 const ReviewForm = () => {
 
@@ -58,7 +59,7 @@ const ReviewForm = () => {
         <button className="review-form__btn" type="submit">оставить отзыв</button>
       </div>
     </form>
-  )
-}
+  );
+};
 
 export default ReviewForm;

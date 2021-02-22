@@ -1,6 +1,8 @@
+import React from "react";
+import PropTypes from "prop-types";
 import "./contacts.scss";
 
-import map from "../../img/map.jpg"
+import map from "../../img/map.jpg";
 import locIcon from "../../img/location.svg";
 
 const Contacts = ({contacts}) => {
@@ -30,6 +32,15 @@ const Contacts = ({contacts}) => {
       </div>
     </div>
   );
-}
+};
+
+Contacts.propTypes = {
+  contacts: PropTypes.shape({
+    address: PropTypes.string.isRequired,
+    workTime: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired
+  })
+};
 
 export default Contacts;

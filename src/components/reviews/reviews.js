@@ -1,4 +1,5 @@
-import {useState} from "react";
+import React, {useState} from "react";
+import PropTypes from "prop-types";
 
 import RatingView from "../rating-view/rating-view";
 import Modal from "../modal/modal";
@@ -41,7 +42,7 @@ const Reviews = ({reviews}) => {
                   <button className="reviews__answer">Ответить</button>
                 </div>
               </li>
-            )
+            );
           })
         }
       </ul>
@@ -51,6 +52,18 @@ const Reviews = ({reviews}) => {
       </Modal>
     </div>
   );
-}
+};
+
+Reviews.propTypes = {
+  reviews: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    userName: PropTypes.string.isRequired,
+    worth: PropTypes.string.isRequired,
+    limitations: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    comment: PropTypes.string.isRequired,
+    dateTime: PropTypes.string.isRequired
+  }))
+};
 
 export default Reviews;

@@ -1,10 +1,13 @@
-import './header.scss';
+import React from "react";
+import PropTypes from "prop-types";
+
 import Logo from "../logo/logo";
 import Nav from "../nav/nav";
 
+import './header.scss';
 
 const Header = ({navList}) => {
-  return(
+  return (
     <header className="header">
       <div className="header__wrapper">
         <Logo/>
@@ -15,6 +18,10 @@ const Header = ({navList}) => {
 
     </header>
   );
-}
+};
+
+Header.propTypes = {
+  navList: PropTypes.arrayOf(PropTypes.string).isRequired
+};
 
 export default Header;

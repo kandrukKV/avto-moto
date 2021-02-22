@@ -1,4 +1,4 @@
-import "./avto.scss";
+import React from "react";
 import Slider from "../slider/slider";
 import AvtoDescription from "../avto-description/avto-description";
 import TabBarItem from "../tab-bar-item/tab-bar-item";
@@ -7,7 +7,9 @@ import {Tab, CONTACTS} from "../../const";
 import AvtoFeatures from "../avto-features/avto-features";
 import Reviews from "../reviews/reviews";
 import Contacts from "../contacts/contacts";
+import AvtoProp from "./avto.prop";
 
+import "./avto.scss";
 
 const Avto = ({car}) => {
   const {
@@ -46,8 +48,9 @@ const Avto = ({car}) => {
         </TabBarItem>
       </TabBar>
     </section>
+  );
+};
 
-  )
-}
+Avto.propTypes = AvtoProp;
 
 export default Avto;

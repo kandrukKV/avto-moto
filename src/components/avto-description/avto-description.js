@@ -1,11 +1,13 @@
-import "./avto-description.scss";
+import React from "react";
+import PropTypes from "prop-types";
 
+import "./avto-description.scss";
 import fuel from "../../img/fuel.png";
 import power from "../../img/power.svg";
 import volume from "../../img/volume.svg";
 import transmission from "../../img/transmission.svg";
 
-const AvtoDescription = ({ name, params, price }) => {
+const AvtoDescription = ({name, params, price}) => {
   const icons = {fuel, power, volume, transmission};
   return (
     <div className="description">
@@ -13,7 +15,7 @@ const AvtoDescription = ({ name, params, price }) => {
 
       <ul className="description__params">
         {
-          Object.keys(params).map(paramKey => {
+          Object.keys(params).map((paramKey) => {
             return (
               <li key={params[paramKey]} className="description__param">
                 <div className="description__icon">
@@ -21,7 +23,7 @@ const AvtoDescription = ({ name, params, price }) => {
                 </div>
                 <p className="description__name">{params[paramKey]}</p>
               </li>
-            )
+            );
           })
         }
       </ul>
@@ -36,9 +38,22 @@ const AvtoDescription = ({ name, params, price }) => {
         <button className="description__btn description__btn--white">в кредит от 11 000 ₽</button>
       </div>
 
-
     </div>
   );
-}
+};
+
+AvtoDescription.propTypes = {
+  name: PropTypes.string.isRequired,
+  params: PropTypes.shape({
+    fuel: PropTypes.string.isRequired,
+    transmission: PropTypes.string.isRequired,
+    power: PropTypes.string.isRequired,
+    volume: PropTypes.string.isRequired
+  }),
+  price: PropTypes.shape({
+    current: PropTypes.string.isRequired,
+    old: PropTypes.string.isRequired
+  })
+};
 
 export default AvtoDescription;

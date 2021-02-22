@@ -1,6 +1,6 @@
+import React, {Fragment} from "react";
 import "./rating-form.scss";
 import {RATING_STARS} from "../../const";
-import {Fragment} from "react";
 
 const RatingForm = () => {
   return (
@@ -14,7 +14,7 @@ const RatingForm = () => {
                 name="rating" value={starValue}
                 id={`${starValue}-stars`}
                 type="radio"
-                onChange={() => console.log(starValue)}
+                onChange={() => {}}
               />
               <label
                 htmlFor={`${starValue}-stars`}
@@ -31,6 +31,6 @@ const RatingForm = () => {
       }
     </div>
   );
-}
+};
 
 export default RatingForm;

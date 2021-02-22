@@ -1,8 +1,9 @@
-import "./logo.scss"
+import React from "react";
+import "./logo.scss";
 import logo from "../../img/logo.svg";
 
 const Logo = () => {
-  return(
+  return (
     <div className="logo">
       <div className="logo__img">
         <img src={logo} width="55" height="55" alt="Logo"/>
@@ -13,6 +14,6 @@ const Logo = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Logo;

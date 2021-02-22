@@ -1,3 +1,4 @@
+import React from "react";
 import './app.scss';
 import Header from "../header/header";
 import {HEADER_NAV_LIST, FOOTER_NAV_LIST} from "../../const";
@@ -16,6 +17,6 @@ const App = () => {
       <Footer navList={FOOTER_NAV_LIST}/>
     </div>
   );
-}
+};
 
 export default App;

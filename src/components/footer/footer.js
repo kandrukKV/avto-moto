@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import "./footer.scss";
 
 const Footer = ({navList}) => {
@@ -10,6 +12,10 @@ const Footer = ({navList}) => {
       </ul>
     </footer>
   );
-}
+};
+
+Footer.propTypes = {
+  navList: PropTypes.arrayOf(PropTypes.string).isRequired
+};
 
 export default Footer;

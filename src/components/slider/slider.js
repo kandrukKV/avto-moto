@@ -1,5 +1,6 @@
 import "./slider.scss";
-import { useState } from "react";
+import React, {useState} from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 
 const Slider = ({slides}) => {
@@ -20,7 +21,7 @@ const Slider = ({slides}) => {
         currentSlide: slide,
         isDisableArrowLeft: slide === 0,
         isDisableArrowRight: slide === slides.length - 1
-      })
+      });
     }
   };
 
@@ -31,15 +32,15 @@ const Slider = ({slides}) => {
         currentSlide: slide,
         isDisableArrowLeft: slide === 0,
         isDisableArrowRight: slide === slides.length - 1
-      })
+      });
     }
   };
 
-  const leftArrowClasses = classNames('slider__arrow', {'slider__arrow--disable' : isDisableArrowLeft});
+  const leftArrowClasses = classNames(`slider__arrow`, {'slider__arrow--disable': isDisableArrowLeft});
 
-  const rightArrowClasses = classNames('slider__arrow', {'slider__arrow--disable' : isDisableArrowRight});
+  const rightArrowClasses = classNames(`slider__arrow`, {'slider__arrow--disable': isDisableArrowRight});
 
-  return(
+  return (
     <div className="slider">
       <div className="slider__top">
         <img className="slider__top-img slider__top-img--new" src={slides[currentSlide].src} alt={slides[currentSlide].title}/>
@@ -50,7 +51,7 @@ const Slider = ({slides}) => {
           <path className={leftArrowClasses} d="M17.0043 26.1719L22.9184 20.3686M17.0043 26.1719L22.6929 31.9692M17.0043 26.1719L35.9813 26.3513"/>
         </svg>
         <ul className="slider__list">
-          {slides.map(slide => {
+          {slides.map((slide) => {
             return (
               <li key={`slide-${slide.id}`} className="slider__item">
                 <img src={slide.src} alt={slide.title} width={128} height={80}/>
@@ -64,7 +65,15 @@ const Slider = ({slides}) => {
         </svg>
       </div>
     </div>
-  )
-}
+  );
+};
+
+Slider.propTypes = {
+  slides: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired
+  }))
+};
 
 export default Slider;

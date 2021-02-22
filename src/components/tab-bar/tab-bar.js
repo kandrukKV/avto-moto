@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from "prop-types";
 import classNames from 'classnames';
 
 import "./tab-bar.scss";
@@ -6,24 +7,30 @@ import TabBarNav from "../tab-bar-nav/tab-bar-nav";
 
 class TabBar extends Component {
 
-  state = {
-    activeTab: null,
+  static propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
+    vertical: PropTypes.bool,
+  };
+
+  constructor() {
+    super();
+    this.state = {activeTab: null};
+    this.setActiveTab = this.setActiveTab.bind(this);
   }
 
   componentDidMount() {
-    const { children = [] } = this.props;
+    const {children = []} = this.props;
 
     const activeTab = this.getChildrenLabels(children)[0];
 
     this.setActiveTab(activeTab);
   }
 
-  getChildrenLabels = (children) => {
-    return children.map(({ props }) => props.label);
-  }
+  getChildrenLabels = (children) => children.map(({props}) => props.label)
 
-  setActiveTab = activeTab => {
-    const { activeTab: currentTab } = this.state;
+  setActiveTab(activeTab) {
+    const {activeTab: currentTab} = this.state;
 
     if (currentTab !== activeTab) {
       this.setState({
@@ -32,30 +39,28 @@ class TabBar extends Component {
     }
   }
 
-  renderTabs = () => {
-    const { children = [] } = this.props;
-    const { activeTab } = this.state;
+  renderTabs() {
+    const {children = []} = this.props;
+    const {activeTab} = this.state;
 
     return this.getChildrenLabels(children).map((navLabel) => (
       <TabBarNav
         key={navLabel}
         navLabel={navLabel}
-        className={classNames({ 'tab-bar-nav--active': activeTab === navLabel })}
+        className={classNames({'tab-bar-nav--active': activeTab === navLabel})}
         onChangeActiveTab={this.setActiveTab}
       />
     ));
   }
 
+
   render() {
-    const { activeTab } = this.state;
+    const {activeTab} = this.state;
     const {
-      children, className, ...attrs
+      children, ...attrs
     } = this.props;
 
-    const classes = classNames(
-      'tab-bar',
-      className,
-    );
+    const classes = classNames(`tab-bar`);
 
     return (
       <div className={classes} {...attrs}>
@@ -64,12 +69,16 @@ class TabBar extends Component {
         </div>
         <div className="tab-bar__container">
           {
-            React.Children.map(children, child => React.cloneElement(child, { activeTab }))
+            React.Children.map(children, (child) => React.cloneElement(child, {activeTab}))
           }
         </div>
       </div>
     );
   }
 }
+
+TabBar.propTypes = {
+  children: PropTypes.node,
+};
 
 export default TabBar;
