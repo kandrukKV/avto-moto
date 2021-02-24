@@ -17,8 +17,7 @@ const Avto = ({car}) => {
     name,
     params,
     price,
-    features,
-    reviews
+    features
   } = car;
   return (
     <section className="avto">
@@ -37,9 +36,7 @@ const Avto = ({car}) => {
           />
         </TabBarItem>
         <TabBarItem label={Tab.REVIEWS}>
-          <Reviews
-            reviews={reviews}
-          />
+          <Reviews/>
         </TabBarItem>
         <TabBarItem label={Tab.CONTACTS}>
           <Contacts

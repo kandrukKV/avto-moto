@@ -7,12 +7,6 @@ import TabBarNav from "../tab-bar-nav/tab-bar-nav";
 
 class TabBar extends Component {
 
-  static propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    vertical: PropTypes.bool,
-  };
-
   constructor() {
     super();
     this.state = {activeTab: null};
@@ -27,7 +21,9 @@ class TabBar extends Component {
     this.setActiveTab(activeTab);
   }
 
-  getChildrenLabels = (children) => children.map(({props}) => props.label)
+  getChildrenLabels(children) {
+    return children.map(({props}) => props.label);
+  }
 
   setActiveTab(activeTab) {
     const {activeTab: currentTab} = this.state;
@@ -56,14 +52,12 @@ class TabBar extends Component {
 
   render() {
     const {activeTab} = this.state;
-    const {
-      children, ...attrs
-    } = this.props;
+    const {children} = this.props;
 
     const classes = classNames(`tab-bar`);
 
     return (
-      <div className={classes} {...attrs}>
+      <div className={classes} >
         <div className="tab-bar__nav">
           {this.renderTabs()}
         </div>
@@ -79,6 +73,7 @@ class TabBar extends Component {
 
 TabBar.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 export default TabBar;

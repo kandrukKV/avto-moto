@@ -4,12 +4,12 @@ import classNames from 'classnames';
 
 import './tab-bar-item.scss';
 
-const TabBarItem = ({children, label, activeTab, ...attrs}) => {
+const TabBarItem = ({children, label, activeTab}) => {
 
-  const classes = classNames(`tab-bar-item`, {'tab-bar-item--active': activeTab === label},);
+  const classes = classNames(`tab-bar-item`, {'tab-bar-item--active': activeTab === label});
 
   return (
-    <div className={classes} {...attrs}>
+    <div className={classes}>
       {children}
     </div>
   );

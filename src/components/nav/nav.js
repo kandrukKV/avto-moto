@@ -13,7 +13,10 @@ const Nav = ({navList}) => {
 };
 
 Nav.propTypes = {
-  navList: PropTypes.arrayOf(PropTypes.string).isRequired
+  navList: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired
+  })).isRequired
 };
 
 export default Nav;

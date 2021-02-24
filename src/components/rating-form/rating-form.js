@@ -1,8 +1,9 @@
 import React, {Fragment} from "react";
+import PropTypes from "prop-types";
 import "./rating-form.scss";
 import {RATING_STARS} from "../../const";
 
-const RatingForm = () => {
+const RatingForm = ({rating, onChangeRating}) => {
   return (
     <div className="rating-form">
       {
@@ -14,7 +15,8 @@ const RatingForm = () => {
                 name="rating" value={starValue}
                 id={`${starValue}-stars`}
                 type="radio"
-                onChange={() => {}}
+                onChange={(evt) => onChangeRating(evt.target.value)}
+                checked={rating === starValue}
               />
               <label
                 htmlFor={`${starValue}-stars`}
@@ -31,6 +33,11 @@ const RatingForm = () => {
       }
     </div>
   );
+};
+
+RatingForm.propTypes = {
+  rating: PropTypes.number.isRequired,
+  onChangeRating: PropTypes.func.isRequired
 };
 
 export default RatingForm;

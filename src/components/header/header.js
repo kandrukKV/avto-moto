@@ -12,16 +12,16 @@ const Header = ({navList}) => {
       <div className="header__wrapper">
         <Logo/>
         <Nav navList={navList}/>
-
       </div>
-
-
     </header>
   );
 };
 
 Header.propTypes = {
-  navList: PropTypes.arrayOf(PropTypes.string).isRequired
+  navList: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired
+  })).isRequired
 };
 
 export default Header;

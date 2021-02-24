@@ -28,6 +28,8 @@ export const CONTACTS = {
   email: `info@avto-moto.ru`
 };
 
-export const RATING_STARS = [1, 2, 3, 4, 5];
+export const RATING_STARS = [5, 4, 3, 2, 1];
 
 export const GOOD_RATING = 3;
+
+export const LOCAL_STORAGE_KEY = `avto-moto`;

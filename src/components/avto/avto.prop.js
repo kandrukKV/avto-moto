@@ -24,7 +24,7 @@ export default {
       value: PropTypes.string.isRequired
     })),
     reviews: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       userName: PropTypes.string.isRequired,
       worth: PropTypes.string.isRequired,
       limitations: PropTypes.string.isRequired,
