@@ -17,7 +17,7 @@ const Modal = ({setIsOpen, children}) => {
     return () => {
       document.removeEventListener(`keydown`, escKeydownListener);
     };
-  });
+  }, []);
 
   return (
     <div className={`modal modal--active`} onClick={() => setIsOpen(false)}>
