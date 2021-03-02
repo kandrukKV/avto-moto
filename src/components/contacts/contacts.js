@@ -23,12 +23,15 @@ const Contacts = ({contacts}) => {
         </li>
         <li className="contacts__item">
           <p className="contacts__name">Email</p>
-          <p className="contacts__value">{contacts.email}</p>
+          <p className="contacts__value"><a className="contacts__email" href={`mailto:${contacts.email}`}>{contacts.email}</a></p>
         </li>
       </ul>
       <div className="contacts__wrap">
         <img className="contacts__map" src={map} width="431" height="271" alt="Карта"/>
         <img className="contacts__icon" src={locIcon} width="32" height="40" alt="Карта"/>
+        <div className="contacts__ya-map">
+          <iframe src={`https://yandex.ru/map-widget/v1/?um=constructor%3Acbc85790938ea2b700853bed3c98dcc2d59065e031f475a5807dff922d489985&amp;source=constructor`} width="431" height="271" frameBorder="0"/>
+        </div>
       </div>
     </div>
   );

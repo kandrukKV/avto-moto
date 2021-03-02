@@ -54,7 +54,7 @@ const Slider = ({slides}) => {
           {slides.map((slide) => {
             return (
               <li key={`slide-${slide.id}`} className="slider__item">
-                <img src={slide.src} alt={slide.title} width={128} height={80}/>
+                <img src={slide.src} width={128} height={80} alt={slide.title}/>
               </li>
             );
           })}

@@ -1,17 +1,17 @@
 import React from "react";
 import Slider from "../slider/slider";
-import AvtoDescription from "../avto-description/avto-description";
+import AutoDescription from "../auto-description/auto-description";
 import TabBarItem from "../tab-bar-item/tab-bar-item";
 import TabBar from "../tab-bar/tab-bar";
 import {Tab, CONTACTS} from "../../const";
-import AvtoFeatures from "../avto-features/avto-features";
+import AutoFeatures from "../auto-features/auto-features";
 import Reviews from "../reviews/reviews";
 import Contacts from "../contacts/contacts";
-import AvtoProp from "./avto.prop";
+import AutoProp from "./auto.prop";
 
-import "./avto.scss";
+import "./auto.scss";
 
-const Avto = ({car}) => {
+const Auto = ({car}) => {
   const {
     slides,
     name,
@@ -20,10 +20,10 @@ const Avto = ({car}) => {
     features
   } = car;
   return (
-    <section className="avto">
-      <div className="avto__top">
+    <section className="auto">
+      <div className="auto__top">
         <Slider slides={slides}/>
-        <AvtoDescription
+        <AutoDescription
           name={name}
           params={params}
           price={price}
@@ -31,7 +31,7 @@ const Avto = ({car}) => {
       </div>
       <TabBar>
         <TabBarItem label={Tab.FEATURES}>
-          <AvtoFeatures
+          <AutoFeatures
             features={features}
           />
         </TabBarItem>
@@ -48,6 +48,6 @@ const Avto = ({car}) => {
   );
 };
 
-Avto.propTypes = AvtoProp;
+Auto.propTypes = AutoProp;
 
-export default Avto;
+export default Auto;

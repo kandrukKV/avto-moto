@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./avto-features.scss";
+import "./auto-features.scss";
 
-const AvtoFeatures = ({features}) => {
+const AutoFeatures = ({features}) => {
   return (
-    <ul className="avto-features">
+    <ul className="auto-features">
       {
         features.map((feature) => {
           return (
-            <li key={feature.name} className="avto-features__item">
+            <li key={feature.name} className="auto-features__item">
               <span>{feature.name}</span>
               <span>{feature.value}</span>
             </li>
@@ -19,11 +19,11 @@ const AvtoFeatures = ({features}) => {
   );
 };
 
-AvtoFeatures.propTypes = {
+AutoFeatures.propTypes = {
   features: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired
   })),
 };
 
-export default AvtoFeatures;
+export default AutoFeatures;

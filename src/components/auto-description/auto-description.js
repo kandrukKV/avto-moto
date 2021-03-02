@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./avto-description.scss";
+import "./auto-description.scss";
 import fuel from "../../img/fuel.png";
 import power from "../../img/power.svg";
 import volume from "../../img/volume.svg";
 import transmission from "../../img/transmission.svg";
 
-const AvtoDescription = ({name, params, price}) => {
+const AutoDescription = ({name, params, price}) => {
   const icons = {fuel, power, volume, transmission};
   return (
     <div className="description">
@@ -42,7 +42,7 @@ const AvtoDescription = ({name, params, price}) => {
   );
 };
 
-AvtoDescription.propTypes = {
+AutoDescription.propTypes = {
   name: PropTypes.string.isRequired,
   params: PropTypes.shape({
     fuel: PropTypes.string.isRequired,
@@ -56,4 +56,4 @@ AvtoDescription.propTypes = {
   })
 };
 
-export default AvtoDescription;
+export default AutoDescription;

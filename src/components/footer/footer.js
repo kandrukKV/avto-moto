@@ -7,7 +7,7 @@ const Footer = ({navList}) => {
     <footer className="footer">
       <ul className="footer__nav-list">
         {
-          navList.map((item, idx) => <li className="footer__nav-item" key={idx}>{item}</li>)
+          navList.map((item, idx) => <li className="footer__nav-item" key={idx}><a className="footer__nav-link" href="#">{item}</a></li>)
         }
       </ul>
     </footer>

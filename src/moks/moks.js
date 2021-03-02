@@ -19,7 +19,7 @@ export const REVIEWS = [
   }
 ];
 
-export const car = {
+export const CAR = {
   id: 1,
   slides: [
     {

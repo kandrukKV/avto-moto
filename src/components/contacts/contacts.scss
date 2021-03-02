@@ -23,6 +23,7 @@
   font-weight: 600;
   font-size: 14px;
   white-space: pre-line;
+  color: #1A212F;
 }
 
 .contacts__wrap {
@@ -30,8 +31,15 @@
 }
 
 .contacts__map {
-  position: relative;
+  display: block;
   z-index: 1;
+}
+
+.contacts__ya-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
 }
 
 .contacts__icon {
@@ -39,4 +47,11 @@
   top: 50%;
   left: 50%;
   z-index: 3;
+}
+
+.contacts__email {
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: #1A212F;
 }

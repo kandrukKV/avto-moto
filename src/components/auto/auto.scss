@@ -1,9 +1,9 @@
 @import "../../design-tokens/mixins";
 
-.avto {
+.auto {
   @include container();
 }
 
-.avto__top {
+.auto__top {
   display: flex;
 }

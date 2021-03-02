@@ -33,3 +33,5 @@ export const RATING_STARS = [5, 4, 3, 2, 1];
 export const GOOD_RATING = 3;
 
 export const LOCAL_STORAGE_KEY = `avto-moto`;
+
+export const ESC_KEY = `Escape`;
