@@ -3,12 +3,13 @@
   margin: 0;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .nav__item {
   margin-left: 68px;
+  margin-bottom: 5px;
 }
 
 .nav__link {
@@ -16,4 +17,8 @@
   font-family: "OpenSans", Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: #48494D;
+}
+
+.nav__link:hover {
+  color: #BD0C21;
 }

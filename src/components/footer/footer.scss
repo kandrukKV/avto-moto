@@ -1,17 +1,26 @@
 @import "../../design-tokens/mixins";
 
 .footer {
-  padding: 30px 0;
+  padding: 33px 0;
   background-color: $bg_color;
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
 }
 
 .footer__nav-list {
   @include container();
-  padding: 0;
+  padding: 0 10px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer__nav-item {
+  margin-bottom: 5px;
 }
 
 .footer__nav-link {
@@ -19,4 +28,8 @@
   font-family: "OpenSans", Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: #48494D;
+}
+
+.footer__nav-link:hover {
+  color: #BD0C21;
 }

@@ -19,11 +19,11 @@ const Contacts = ({contacts}) => {
         </li>
         <li className="contacts__item">
           <p className="contacts__name">Телефон</p>
-          <p className="contacts__value">{contacts.phone}</p>
+          <p className="contacts__value"><a className="contacts__link" href={`tel:${contacts.phone}`}>{contacts.phone}</a></p>
         </li>
         <li className="contacts__item">
           <p className="contacts__name">Email</p>
-          <p className="contacts__value"><a className="contacts__email" href={`mailto:${contacts.email}`}>{contacts.email}</a></p>
+          <p className="contacts__value"><a className="contacts__link" href={`mailto:${contacts.email}`}>{contacts.email}</a></p>
         </li>
       </ul>
       <div className="contacts__wrap">

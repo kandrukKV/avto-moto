@@ -49,9 +49,13 @@
   z-index: 3;
 }
 
-.contacts__email {
+.contacts__link {
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
   color: #1A212F;
+}
+
+.contacts__link:hover {
+  color: #BD0C21;
 }

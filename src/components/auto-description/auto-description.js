@@ -28,7 +28,10 @@ const AutoDescription = ({name, params, price}) => {
         }
       </ul>
 
-      <p className="description__price">{price.current}₽<span>{price.old}₽</span></p>
+      <div className="description__price">
+        {price.current} ₽
+        <div className="description__price--old">{price.old} ₽</div>
+      </div>
 
       <div className="description__btn-wrap">
         <button className="description__btn">оставить заявку</button>
