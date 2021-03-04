@@ -21,6 +21,11 @@
 
 .footer__nav-item {
   margin-bottom: 5px;
+  margin-right: 15px;
+}
+
+.footer__nav-item:last-child {
+  margin-right: 0;
 }
 
 .footer__nav-link {
